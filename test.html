@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <p id="teks">Teks awal</p>
+  <button onclick="ubahTeks()">Klik</button>
+  
+  <script>
+  function ubahTeks() {
+    document.getElementById("teks").innerText = "Teks sudah diubah!";
+  }
+  </script>
+
+<ul id="produk">
+  <li>Produk A <button onclick="tambah('Produk A', 10000)">Tambah</button></li>
+  <li>Produk B <button onclick="tambah('Produk B', 15000)">Tambah</button></li>
+</ul>
+<h3>Keranjang:</h3>
+<ul id="keranjang"></ul>
+<p>Total: <span id="total">0</span></p>
+
+
+<h2>Formulir Pendaftaran</h2>
+<form id="formPendaftaran">
+  <label>Nama:</label><br>
+  <input type="text" id="nama"><br>
+  <label>Email:</label><br>
+  <input type="email" id="email"><br>
+  <label>Jurusan:</label><br>
+  <select id="jurusan">
+    <option value="">-- Pilih --</option>
+    <option value="Informatika">Informatika</option>
+    <option value="Sistem Informasi">Sistem Informasi</option>
+  </select><br><br>
+  <button type="button" onclick="kirimForm()">Kirim</button>
+  <button type="button" onclick="resetForm()">Reset</button>
+</form>
+
+<div id="hasil"></div>
+
+
+  <script src="js1.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- bagian awal -->
+    <p id="test">bagian 1</p>
+<!-- dom -->
+    <ul id="masuk">
+        <li>item lama</li>
+    </ul>
+
+<!-- addeventlistener--> 
+    <button id="panggil">klik disini</button>
+
+
+
+    
+    <!-- studi kasus -->
+        <h2>Daftar Kegiatan</h2>
+        <input type="text" id="input-kegiatan" placeholder="Tulis kegiatanmu..." />
+        <button id="tambah">Tambah</button>
+        <ul id="list-kegiatan">
+        </ul>
+
+
+<script>
+    // panggil nilai
+  document.addEventListener('DOMContentLoaded', function() {
+    const input = document.getElementById('input-kegiatan')
+    const tombol = document.getElementById('tambah')
+    const list = document.getElementById('list-kegiatan')
+    // aksi klik = ambil value dan hapus spasi di kiri dan kanan saat mengisi input 
+    tombol.addEventListener('click', function() {
+      const teks = input.value.trim()
+    // loop supaya data bisa diisi jika nilai dalam input tidak ada maka tidak usah disi/deklarasikan else
+      if (teks !== '') {
+        const itemBaru = document.createElement('li')
+        itemBaru.innerText = teks
+        itemBaru.classList.add('baru')
+        list.appendChild(itemBaru)
+        input.value = ''  // Kosongkan input
+        input.focus()     // Fokus balik ke input
+      } else {
+        alert('Tolong isi kegiatan dulu!')
+      }
+    })
+  })
+</script>
+
+
+<!-- dom -->
+<script>
+    document.getElementById('test').innerText = 'test'
+</script>
+
+<!-- event listener -->
+    <script>
+        document.getElementById('panggil').addEventListener('click',function(){
+            alert('tombol diklik')
+            document.body.style.backgroundColor = "blue"
+        })
+    </script>
+
+<!-- buat nilai baru dengan dom -->
+    <script>
+       const list = document.createElement('li')
+       list.innerText = "item baru"
+       list.style.backgroundColor = 'lightblue'
+       const masukkanList = document.getElementById('masuk')
+        masukkanList.appendChild(list)
+        masukkanList.remove(list)
+
+    </script>
+</body>
+</html>

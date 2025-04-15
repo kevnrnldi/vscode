@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="demo">test</p>
+   
+<!-- eventlistener -->
+    <ul id="list">
+        <li>item lama</li>
+    </ul>
+    <button id="klik">Klik disini</button>
+
+
+    <h2>Daftar Kegiatan</h2>
+    <input type="text" id="input-kegiatan" placeholder="Tulis kegiatanmu..." />
+    <button id="tambah">Tambah</button>
+    <ul id="list-kegiatan">
+    </ul>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const input = document.getElementById('input-kegiatan')
+        const tombol = document.getElementById('tambah')
+        const list = document.getElementById('list-kegiatan')
+  
+        tombol.addEventListener('click', function() {
+          const teks = input.value.trim()
+  
+          if (teks !== '') {
+            const itemBaru = document.createElement('li')
+            itemBaru.innerText = teks
+            itemBaru.classList.add('baru')
+            list.appendChild(itemBaru)
+            input.value = ''  // Kosongkan input
+            input.focus()     // Fokus balik ke input
+          } else {
+            alert('Tolong isi kegiatan dulu!')
+          }
+        })
+      })
+    </script>
+<!-- eventlistener -->
+<script>
+  document.getElementById("klik").addEventListener("click", function() {
+    alert("Tombol diklik!");
+  });
+</script>
+
+<script>
+    document.body.style.backgroundColor = "lightblue"
+</script>
+
+
+
+
+    <script src="test.js"></script>
+</body>
+</html>

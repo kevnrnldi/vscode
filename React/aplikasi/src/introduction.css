@@ -1,0 +1,49 @@
+.App {
+    text-align: center;
+    }
+    .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    }
+    }
+    .App-header {
+    margin-top: 100px;
+    background-color: rgb(250, 250, 250);
+    min-height: 20vh;
+    text-align: center;
+    font-family: lucida Console, monospace;
+    font-size: calc(10px + 3vmin);
+    color: black;
+    border: 2px solid gray;
+    border-radius: 15px;
+    padding: 5px;
+    display: inline-block;
+    padding: 10px;
+    max-width: 100%;
+    box-sizing: border;
+    height: auto;
+    box-shadow: 10px 10px 5px 0px rgb(39, 38, 38);
+    -webkit-box-shadow: 10px 10px 5px 0px rgb(39,
+    38, 38);
+    -moz-box-shadow: 10px 10px 5px 0px rgb(39, 38,
+    38);
+    }
+    .App-header h3 {
+    border-bottom: 2px solid black;
+    }
+    .App-header p {
+    margin: 0 0 10px;
+    }
+    @keyframes App-logo-spin {
+    from {
+    transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(360deg);
+    }
+    }
+    

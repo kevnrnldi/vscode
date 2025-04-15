@@ -23,13 +23,7 @@ for( let i = 0; i <= 10; i++){
 
 
 let nilai = 80;
-if (nilai >= 90) {
-  console.log("A");
-} else if (nilai >= 80) {
-  console.log("B");
-} else {
-  console.log("C");
-}
+
 
 function sapa(nama,umur) {
     return "Perkenalkan saya " + nama + " saya berumur " + umur;
@@ -87,3 +81,15 @@ function resetForm() {
   document.getElementById("formPendaftaran").reset();
   document.getElementById("hasil").innerHTML = "";
 }
+
+
+
+
+const pop = getElementById('demoku').innerText = "bajingan"
+
+console.log(pop)
+
+
+
+
+

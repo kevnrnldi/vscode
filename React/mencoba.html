@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    
+    <body>
+       
+      
+        
+      </body>
+    <div id="root"></div>
+  
+    <div id="test"></div>
+    <script type="text/babel">
+
+        const container = document.getElementById("root")
+        const root = ReactDOM.createRoot(container)
+        const container2 = document.getElementById("test");
+          const test = ReactDOM.createRoot(container2);
+          test.render(<h2>Ini dari TEST</h2>);
+        
+        function Panggil(props){
+            return(
+            <div className = 'test'>
+                <h1>universitas {props.name} </h1>
+                <h1>bengkulu</h1>
+            </div>
+            )
+        }
+
+        function Product({ name, price, stock }) {
+        const [jumlah, setJumlah] = React.useState(0);
+
+        return (
+            <div>
+            <Panggil name="Indonesia" />
+            <h2>{name}</h2>
+            <p>Harga: Rp{price}</p>
+            <p>Stok: {stock}</p>
+            <input type="number" value={jumlah} onChange={(e) => setJumlah(e.target.value)} />
+            <p>Total Harga: Rp{jumlah * price}</p>
+            </div>
+        );
+        }
+        root.render(
+           
+           <Product name="Laptop" price={7500000} stock={10} />
+        )
+        
+
+
+
+        
+    </script>
+
+</body>
+</html>

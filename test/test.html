@@ -44,6 +44,34 @@
 <div id="hasil"></div>
 
 
+
+
+
+<h2>Daftar Nama</h2>
+<input type="text" id="inputNama" placeholder="Masukkan nama">
+<button onclick="tambahNama()">Tambah</button>
+
+<ul id="daftar"></ul>
+
+<script>
+  function tambahNama() {
+    const input = document.getElementById("inputNama");
+    const nama = input.value;
+
+    if (nama === "") {
+      alert("Nama tidak boleh kosong!");
+      return;
+    }
+
+    const daftar = document.getElementById("daftar");
+    daftar.innerHTML += `<li>${nama}</li>`;
+    input.value = "";
+  }
+</script>
+
+
+
+
   <script src="js1.js"></script>
 </body>
 </html>
